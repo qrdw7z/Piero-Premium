@@ -13,8 +13,16 @@
   "sections": {
     "footer_m9NzUG": {
       "type": "footer",
+      "name": "t:names.footer",
+      "settings": {
+        "section_width": "full-width",
+        "gap": 42,
+        "background_color": "#111111",
+        "padding-block-start": 56,
+        "padding-block-end": 48
+      },
       "blocks": {
-        "group_H6VpwJ": {
+        "brand_newsletter": {
           "type": "group",
           "settings": {
             "content_direction": "column",
@@ -24,7 +32,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 6,
+            "gap": 14,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -49,16 +57,40 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "text_LWt8Pz": {
+            "brand_name": {
               "type": "text",
               "settings": {
-                "text": "<h2>Join our email list</h2>",
+                "text": "<h2>PIERO<br>PREMIUM</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h4",
+                "type_preset": "h2",
+                "font": "var(--font-heading--family)",
+                "font_size": "1.6rem",
+                "line_height": "normal",
+                "letter_spacing": "0.08em",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "brand_copy": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Günlük stilin premium hali. Yeni sezon ürünleri ve özel fırsatlardan haberdar olun.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "font_size": "0.9rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -73,16 +105,152 @@
               },
               "blocks": {}
             },
-            "text_f9CFLH": {
+            "newsletter_heading": {
               "type": "text",
               "settings": {
-                "text": "<p>Get exclusive deals and early access to new products.</p>",
+                "text": "<h3>Bize Katıl</h3>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-body--family)",
+                "font_size": "0.8rem",
+                "line_height": "normal",
+                "letter_spacing": "0.08em",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "email_signup_crihX7": {
+              "type": "email-signup",
+              "settings": {
+                "width": "fill",
+                "custom_width": 100,
+                "heading_preset": "h3",
+                "border_style": "all",
+                "input_style": "custom",
+                "border_width": 1,
+                "border_radius": 0,
+                "input_background_color": "#ffffff",
+                "input_text_color": "#111111",
+                "input_border_color": "#ffffff",
+                "input_type_preset": "paragraph",
+                "style_class": "button-unstyled",
+                "display_type": "arrow",
+                "label": "Kayıt Ol",
+                "integrated_button": true,
+                "button_type_preset": "paragraph",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["brand_name", "brand_copy", "newsletter_heading", "email_signup_crihX7"]
+        },
+        "categories": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Kategoriler</h3><p><a href=\"/collections/all\">Tüm Ürünler</a><br><a href=\"/collections/all?filter.p.product_type=G%C3%B6mlek\">Gömlek</a><br><a href=\"/collections/all?filter.p.product_type=Tişört\">Tişört</a><br><a href=\"/collections/all?filter.p.product_type=Triko\">Triko</a><br><a href=\"/collections/all?filter.p.product_type=Pantolon\">Pantolon</a></p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "0.9rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "customer_service": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Müşteri Hizmetleri</h3><p><a href=\"/pages/contact\">İletişim</a><br><a href=\"/policies/refund-policy\">İade ve Değişim</a><br><a href=\"/policies/shipping-policy\">Kargo Politikası</a><br><a href=\"/policies/privacy-policy\">KVKK ve Gizlilik</a><br><a href=\"/policies/terms-of-service\">Mesafeli Satış Sözleşmesi</a></p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "0.9rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "about": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 14,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "open_in_new_tab": false,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "about_copy": {
+              "type": "text",
+              "settings": {
+                "text": "<h3>PIERO Premium</h3><p>Sivas merkezde günlük ve premium erkek giyim.</p><p><a href=\"tel:+905524869877\">0552 486 98 77</a><br><a href=\"https://www.instagram.com/piero.premium/\">Instagram</a></p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "font_size": "0.9rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -96,104 +264,63 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "payment_icons": {
+              "type": "payment-icons",
+              "settings": {
+                "horizontal_alignment": "flex-start",
+                "gap": 10,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "social_links": {
+              "type": "social-links",
+              "settings": {
+                "icon_color": "#ffffff",
+                "facebook_url": "",
+                "instagram_url": "https://www.instagram.com/piero.premium/",
+                "youtube_url": "",
+                "tiktok_url": "",
+                "twitter_url": ""
+              },
+              "blocks": {}
             }
           },
-          "block_order": [
-            "text_LWt8Pz",
-            "text_f9CFLH"
-          ]
-        },
-        "email_signup_crihX7": {
-          "type": "email-signup",
-          "settings": {
-            "width": "fill",
-            "custom_width": 100,
-            "heading_preset": "h3",
-            "border_style": "all",
-            "input_style": "custom",
-            "border_width": 1,
-            "border_radius": 100,
-            "input_background_color": "{{ settings.color_palette.background }}",
-            "input_text_color": "{{ settings.color_palette.color1 }}",
-            "input_border_color": "{{ settings.color_palette.color2 }}",
-            "input_type_preset": "paragraph",
-            "style_class": "button-unstyled",
-            "display_type": "arrow",
-            "label": "Sign up",
-            "integrated_button": true,
-            "button_type_preset": "paragraph",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+          "block_order": ["about_copy", "payment_icons", "social_links"]
         }
       },
-      "block_order": [
-        "group_H6VpwJ",
-        "email_signup_crihX7"
-      ],
-      "name": "t:names.footer",
-      "settings": {
-        "section_width": "page-width",
-        "gap": 20,
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 30,
-        "padding-block-end": 30
-      }
+      "block_order": ["brand_newsletter", "categories", "customer_service", "about"]
     },
     "footer_utilities_jLGE8U": {
       "type": "footer-utilities",
+      "name": "t:names.utilities",
+      "settings": {
+        "section_width": "full-width",
+        "gap": 24,
+        "divider_thickness": 1,
+        "divider_color": "#3a3a3a",
+        "background_color": "#111111",
+        "padding-block-start": 18,
+        "padding-block-end": 24
+      },
       "blocks": {
         "footer_copyright_jweRK8": {
           "type": "footer-copyright",
-          "settings": {
-            "show_powered_by": true,
-            "font_size": "0.75rem",
-            "case": "none"
-          },
+          "settings": {"show_powered_by": false, "font_size": "0.75rem", "case": "none"},
           "blocks": {}
         },
         "footer_policy_list_VCdnpa": {
           "type": "footer-policy-list",
-          "settings": {
-            "font_size": "0.75rem",
-            "case": "none"
-          },
-          "blocks": {}
-        },
-        "social_links_Ew63Kq": {
-          "type": "social-links",
-          "settings": {
-            "facebook_url": "https://www.facebook.com/",
-            "instagram_url": "https://www.instagram.com/",
-            "youtube_url": "https://www.youtube.com/",
-            "tiktok_url": "https://www.tiktok.com/",
-            "twitter_url": "https://x.com/"
-          },
+          "settings": {"font_size": "0.75rem", "case": "none"},
           "blocks": {}
         }
       },
-      "block_order": [
-        "footer_copyright_jweRK8",
-        "footer_policy_list_VCdnpa",
-        "social_links_Ew63Kq"
-      ],
-      "name": "t:names.utilities",
-      "settings": {
-        "section_width": "page-width",
-        "gap": 24,
-        "divider_thickness": 1,
-        "divider_color": "{{ settings.color_palette.color2 }}",
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 20,
-        "padding-block-end": 48
-      }
+      "block_order": ["footer_copyright_jweRK8", "footer_policy_list_VCdnpa"]
     }
   },
-  "order": [
-    "footer_m9NzUG",
-    "footer_utilities_jLGE8U"
-  ]
+  "order": ["footer_m9NzUG", "footer_utilities_jLGE8U"]
 }

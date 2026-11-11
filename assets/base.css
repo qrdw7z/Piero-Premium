@@ -384,6 +384,57 @@ p:empty {
   }
 }
 
+/* Piero footer — dense, service-led layout inspired by Turkish fashion storefronts. */
+.section-wrapper:has(.footer-content) .section-background,
+.footer-utilities .section-background {
+  background: #111;
+}
+
+.footer-content {
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.footer-content h2,
+.footer-content h3 {
+  color: #fff;
+}
+
+.footer-content h3 {
+  margin-block: 0 .95rem;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.footer-content p {
+  color: rgb(255 255 255 / 72%);
+  line-height: 1.7;
+}
+
+.footer-content a {
+  color: rgb(255 255 255 / 72%);
+  text-underline-offset: .28em;
+  text-decoration-color: transparent;
+  transition: color .2s ease, text-decoration-color .2s ease;
+}
+
+.footer-content a:hover {
+  color: #fff;
+  text-decoration-color: currentColor;
+}
+
+.footer-content .email-signup__input {
+  min-height: 2.85rem;
+}
+
+@media screen and (max-width: 749px) {
+  .footer-content {
+    gap: 2.25rem;
+  }
+}
+
 /* For full-width sections with margin, content still spans full width but with space on the sides */
 .section--full-width.section--full-width-margin > * {
   grid-column: 1 / -1;
@@ -1873,5 +1924,65 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
   /* Make sticky content immediately stick to the top of the page */
   .sticky-content {
     margin-top: calc(var(--header-height) * var(--transparent-header-offset-boolean) * -1);
+  }
+}
+
+/* Piero fashion storefront — restrained, editorial product presentation. */
+#header-group {
+  letter-spacing: .035em;
+}
+
+#header-group .header__row {
+  padding-inline: clamp(1rem, 3vw, 3rem);
+}
+
+#header-group .header__menu-item,
+#header-group .header-actions__action {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.section-resource-list__header h3 {
+  font-size: clamp(1.65rem, 3vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -.045em;
+}
+
+.section-resource-list__header .button,
+.section-resource-list__header a {
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .45em;
+}
+
+.product-card__content {
+  padding-top: .7rem;
+}
+
+.product-card__content :is(h1, h2, h3, h4, h5, h6, p) {
+  letter-spacing: .015em;
+}
+
+.product-card img {
+  transition: transform .45s cubic-bezier(.2, .65, .2, 1);
+}
+
+@media (hover: hover) {
+  .product-card:hover img {
+    transform: scale(1.025);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  #header-group .header__row {
+    padding-inline: 1rem;
+  }
+
+  .section-resource-list__header h3 {
+    font-size: 1.45rem;
   }
 }
