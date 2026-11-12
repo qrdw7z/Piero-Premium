@@ -1,0 +1,102 @@
+<dialog
+  id="piero-wheel-popup"
+  class="piero-wheel-popup"
+  aria-labelledby="piero-wheel-title"
+  aria-describedby="piero-wheel-description"
+>
+  <div class="piero-wheel-popup__panel">
+    <button class="piero-wheel-popup__close" type="button" aria-label="Kapat" data-wheel-close>×</button>
+    <div class="piero-wheel-popup__wheel-area" aria-hidden="true">
+      <div class="piero-wheel-popup__pointer"></div>
+      <div class="piero-wheel-popup__wheel" data-wheel>
+        <span>%10</span><span>HEDİYE</span><span>%15</span><span>ŞANS</span><span>%5</span><span>PIERO</span>
+      </div>
+    </div>
+    <div class="piero-wheel-popup__content">
+      <p class="piero-wheel-popup__eyebrow">PIERO PREMIUM</p>
+      <h2 id="piero-wheel-title">Şansını çevir</h2>
+      <p id="piero-wheel-description">Yeni sezona özel fırsatlardan ilk sen haberdar ol.</p>
+      <button class="piero-wheel-popup__spin button" type="button" data-wheel-spin>ÇARKI ÇEVİR</button>
+      <p class="piero-wheel-popup__result" aria-live="polite" data-wheel-result></p>
+      {% form 'customer', class: 'piero-wheel-popup__form', data-wheel-form: '' %}
+        <input type="hidden" name="contact[tags]" value="newsletter,wheel-popup">
+        <label class="visually-hidden" for="PieroWheelEmail">E-posta adresi</label>
+        <div class="piero-wheel-popup__email">
+          <input id="PieroWheelEmail" type="email" name="contact[email]" autocomplete="email" placeholder="E-posta adresiniz" required>
+          <button type="submit">KATIL</button>
+        </div>
+      {% endform %}
+      <p class="piero-wheel-popup__note">Bültene katılarak kampanya ve yeni ürün duyurularını almayı kabul edersiniz.</p>
+    </div>
+  </div>
+</dialog>
+
+<script src="{{ 'piero-wheel-popup.js' | asset_url }}" defer></script>
+
+<style>
+  .piero-wheel-popup {
+    width: min(92vw, 46rem);
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #111;
+  }
+
+  .piero-wheel-popup::backdrop { background: rgb(0 0 0 / 62%); }
+
+  .piero-wheel-popup__panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(15rem, .9fr) minmax(18rem, 1.1fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    background: #f5f2ec;
+  }
+
+  .piero-wheel-popup__close {
+    position: absolute;
+    inset: .55rem .7rem auto auto;
+    z-index: 1;
+    border: 0;
+    background: none;
+    color: #111;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .piero-wheel-popup__wheel-area { position: relative; width: min(100%, 19rem); margin-inline: auto; }
+  .piero-wheel-popup__pointer { position: absolute; z-index: 1; inset: -.35rem 0 auto; margin: auto; width: 0; height: 0; border-inline: .75rem solid transparent; border-top: 1.45rem solid #111; }
+  .piero-wheel-popup__wheel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    aspect-ratio: 1;
+    padding: 1.25rem;
+    border: .5rem solid #111;
+    border-radius: 50%;
+    background: conic-gradient(#d9b77a 0 60deg, #111 60deg 120deg, #eee8dd 120deg 180deg, #d9b77a 180deg 240deg, #111 240deg 300deg, #eee8dd 300deg);
+    box-shadow: 0 12px 28px rgb(0 0 0 / 18%);
+    transition: transform 2.8s cubic-bezier(.12,.78,.16,1);
+  }
+
+  .piero-wheel-popup__wheel span { display: grid; place-items: center; color: #111; font-size: .68rem; font-weight: 800; letter-spacing: .04em; text-align: center; }
+  .piero-wheel-popup__wheel span:nth-child(2), .piero-wheel-popup__wheel span:nth-child(4) { color: #fff; }
+  .piero-wheel-popup__eyebrow { margin: 0 0 .65rem; font-size: .7rem; font-weight: 800; letter-spacing: .16em; }
+  .piero-wheel-popup__content h2 { margin: 0; font-size: clamp(2rem, 5vw, 3.25rem); line-height: .95; text-transform: uppercase; }
+  .piero-wheel-popup__content > p:not(.piero-wheel-popup__eyebrow):not(.piero-wheel-popup__note):not(.piero-wheel-popup__result) { margin: 1rem 0 1.25rem; }
+  .piero-wheel-popup__spin { width: 100%; min-height: 3.15rem; border-radius: 0; background: #111; color: #fff; }
+  .piero-wheel-popup__result { min-height: 1.3em; margin: .8rem 0 0; font-size: .85rem; font-weight: 700; }
+  .piero-wheel-popup__form { margin-top: 1rem; }
+  .piero-wheel-popup__email { display: flex; border-bottom: 1px solid #111; }
+  .piero-wheel-popup__email input { width: 100%; min-width: 0; padding: .85rem 0; border: 0; background: transparent; color: #111; }
+  .piero-wheel-popup__email button { border: 0; background: transparent; color: #111; font-weight: 800; font-size: .75rem; cursor: pointer; }
+  .piero-wheel-popup__note { margin: .75rem 0 0; font-size: .68rem; line-height: 1.45; opacity: .72; }
+
+  @media screen and (max-width: 749px) {
+    .piero-wheel-popup__panel { grid-template-columns: 1fr; gap: 1.3rem; padding: 2.6rem 1.4rem 1.6rem; }
+    .piero-wheel-popup__wheel-area { width: min(12.5rem, 60vw); }
+    .piero-wheel-popup__content { text-align: center; }
+  }
+</style>
