@@ -24,7 +24,7 @@
             "case": "none",
             "text_effect": "reveal",
             "animation_repeat": false,
-            "text_color": "#FFFFFF"
+            "text_color": "#ffffff"
           },
           "blocks": {}
         },
@@ -334,7 +334,7 @@
       },
       "name": "t:names.product_list",
       "settings": {
-        "collection": "all",
+        "collection": "yeni-sezon",
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "max_products": 12,
