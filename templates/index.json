@@ -40,7 +40,7 @@
         "stack_media_on_mobile": false,
         "custom_mobile_media": true,
         "media_type_1_mobile": "image",
-        "image_1_mobile": "shopify://shop_images/mobilbanner.png",
+        "image_1_mobile": "shopify://shop_images/mobi.png",
         "media_type_2_mobile": "image",
         "link": "shopify://collections/all",
         "open_in_new_tab": false,
@@ -133,16 +133,6 @@
         "padding-block-end": 11,
         "gap_between_elements": 24
       }
-    },
-    "piero_lookbook": {
-      "type": "piero-lookbook",
-      "blocks": {
-        "look_haki": { "type": "look", "settings": { "fallback_image": "instagram-products/triko-kazak-haki-kombin.jpg", "title": "TRİKO & DENİM" } },
-        "look_oversize": { "type": "look", "settings": { "fallback_image": "instagram-products/oversize1.jpg", "title": "GÜNLÜK KESİMLER" } },
-        "look_baklava": { "type": "look", "settings": { "fallback_image": "instagram-products/baklava-desenli-triko-gabardin-kombin.jpg", "title": "YENİ SEZON" } }
-      },
-      "block_order": ["look_haki", "look_oversize", "look_baklava"],
-      "settings": { "eyebrow": "SEÇİLİ KOMBİNLER", "heading": "STİLİNİ TAMAMLA", "link_label": "TÜM KOMBİNLER" }
     },
     "product_list_f6hPj8": {
       "type": "product-list",
@@ -347,7 +337,6 @@
   "order": [
     "hero_jVaWmY",
     "marquee_VTww4J",
-    "piero_lookbook",
     "product_list_f6hPj8"
   ]
 }
