@@ -384,19 +384,19 @@ p:empty {
   }
 }
 
-/* Piero footer — quiet, editorial layout with only the links shoppers use. */
+/* Piero footer — structured storefront footer: brand, categories, support and about. */
 .section-wrapper:has(.footer-content) .section-background,
 .footer-utilities .section-background {
   background: #111;
 }
 
 .footer-content {
-  max-width: 1240px;
+  max-width: 1440px;
   margin-inline: auto;
 }
 
 .footer-content > * {
-  max-width: 28rem;
+  max-width: none;
 }
 
 .footer-content h2,
@@ -405,7 +405,7 @@ p:empty {
 }
 
 .footer-content h3 {
-  margin-block: 0 .7rem;
+  margin-block: 0 .95rem;
   font-size: .72rem;
   font-weight: 700;
   letter-spacing: .1em;
@@ -437,17 +437,9 @@ p:empty {
   min-height: 2.85rem;
 }
 
-@media screen and (min-width: 990px) {
-  .footer-content {
-    grid-template-columns: minmax(18rem, 1.45fr) repeat(2, minmax(9rem, .7fr));
-    column-gap: clamp(2.25rem, 6vw, 6rem);
-    row-gap: 2rem;
-  }
-}
-
 @media screen and (max-width: 749px) {
   .footer-content {
-    gap: 1.75rem;
+    gap: 2.25rem;
   }
 
   /* The integrated newsletter control is intentionally split on small screens.

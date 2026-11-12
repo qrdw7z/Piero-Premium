@@ -56,7 +56,7 @@
             "brand_name": {
               "type": "text",
               "settings": {
-                "text": "<h2>PIERO PREMIUM</h2>",
+                "text": "<h2>PIERO<br>PREMIUM</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -81,7 +81,7 @@
             "brand_copy": {
               "type": "text",
               "settings": {
-                "text": "<p>Yeni sezon ve seçili ürünlerden ilk siz haberdar olun.</p>",
+                "text": "<p>Yeni ürünler ve özel fırsatlardan haberdar olmak için bültenimize katılın.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -106,7 +106,7 @@
             "newsletter_heading": {
               "type": "text",
               "settings": {
-                "text": "<h3>E-posta Bülteni</h3>",
+                "text": "<h3>Bize Katıl</h3>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -171,7 +171,7 @@
         "categories": {
           "type": "text",
           "settings": {
-            "text": "<h3>Keşfet</h3><p><a href=\"/collections/all\">Tüm Ürünler</a><br><a href=\"/collections/all?sort_by=created-descending\">Yeni Sezon</a><br><a href=\"https://www.instagram.com/piero.premium/\">Instagram</a></p>",
+            "text": "<h3>Kategoriler</h3><p><a href=\"/\">Anasayfa</a><br><a href=\"/collections/all?sort_by=created-descending\">Yeni Sezon</a><br><a href=\"/collections/all\">Tüm Ürünler</a><br><a href=\"/collections/all?filter.p.product_type=G%C3%B6mlek\">Gömlek</a><br><a href=\"/collections/all?filter.p.product_type=Pantolon\">Alt Giyim</a></p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
@@ -196,7 +196,7 @@
         "customer_service": {
           "type": "text",
           "settings": {
-            "text": "<h3>Yardım</h3><p><a href=\"/pages/contact\">İletişim</a><br/><a href=\"/policies/refund-policy\">İade ve Değişim</a><br/><a href=\"/policies/shipping-policy\">Kargo</a></p>",
+            "text": "<h3>Müşteri Hizmetleri</h3><p><a href=\"/pages/contact\">İletişim</a><br/><a href=\"/policies/refund-policy\">İade ve Değişim</a><br/><a href=\"/policies/shipping-policy\">Kargo Politikası</a><br/><a href=\"/policies/privacy-policy\">KVKK</a><br/><a href=\"/policies/terms-of-service\">Mesafeli Satış Sözleşmesi</a></p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
@@ -260,7 +260,7 @@
             "about_copy": {
               "type": "text",
               "settings": {
-                "text": "<h3>PIERO Premium</h3><p>Sivas merkezde günlük ve premium erkek giyim.</p><p><a href=\"tel:+905524869877\">+90 552 486 98 77</a><br/><a href=\"https://www.instagram.com/piero.premium/\">Instagram</a></p>",
+                "text": "<h3>Hakkımızda</h3><p><a href=\"/pages/contact\">Mağazamız</a><br/><a href=\"https://www.instagram.com/piero.premium/\">Instagram</a><br/><a href=\"tel:+905524869877\">+90 552 486 98 77</a></p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -325,15 +325,16 @@
       "block_order": [
         "brand_newsletter",
         "categories",
-        "customer_service"
+        "customer_service",
+        "about"
       ],
       "name": "t:names.footer",
       "settings": {
         "section_width": "full-width",
-        "gap": 32,
+        "gap": 42,
         "background_color": "#111111",
-        "padding-block-start": 44,
-        "padding-block-end": 32
+        "padding-block-start": 56,
+        "padding-block-end": 48
       }
     },
     "footer_utilities_jLGE8U": {
