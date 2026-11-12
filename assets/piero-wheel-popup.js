@@ -17,6 +17,32 @@ if (popup instanceof HTMLDialogElement && !window.Shopify?.designMode) {
     if (event.target === popup) close();
   });
 
+  popup.addEventListener('click', async (event) => {
+    const copyButton = event.target.closest('[data-wheel-copy]');
+    if (!(copyButton instanceof HTMLButtonElement)) return;
+
+    const code = copyButton.dataset.wheelCopy;
+    if (!code) return;
+
+    try {
+      await navigator.clipboard.writeText(code);
+      copyButton.textContent = 'KOPYALANDI';
+      copyButton.classList.add('is-copied');
+    } catch {
+      const fallback = document.createElement('textarea');
+      fallback.value = code;
+      fallback.setAttribute('readonly', '');
+      fallback.style.position = 'fixed';
+      fallback.style.opacity = '0';
+      document.body.append(fallback);
+      fallback.select();
+      document.execCommand('copy');
+      fallback.remove();
+      copyButton.textContent = 'KOPYALANDI';
+      copyButton.classList.add('is-copied');
+    }
+  });
+
   popup.querySelector('[data-wheel-spin]')?.addEventListener('click', (event) => {
     const button = event.currentTarget;
     const wheel = popup.querySelector('[data-wheel]');
@@ -33,6 +59,6 @@ if (popup instanceof HTMLDialogElement && !window.Shopify?.designMode) {
     button.disabled = true;
     wheel.style.transform = `rotate(${2160 + prize.rotation}deg)`;
     popup.dataset.spun = 'true';
-    result.innerHTML = `<strong>${prize.code}</strong><small>Tebrikler! ${prize.label} kazandın.</small>`;
+    result.innerHTML = `<span class="piero-wheel-popup__code"><strong>${prize.code}</strong><button type="button" data-wheel-copy="${prize.code}" aria-label="${prize.code} kodunu kopyala">KODU KOPYALA</button></span><small>Tebrikler! ${prize.label} kazandın.</small>`;
   });
 }

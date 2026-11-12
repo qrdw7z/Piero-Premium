@@ -107,7 +107,10 @@
   .piero-wheel-popup__spin:hover { background: var(--piero-wine-deep); transform: translate(.15rem, .15rem); box-shadow: .15rem .15rem 0 var(--piero-ink); }
   .piero-wheel-popup__spin:disabled { cursor: wait; opacity: .82; }
   .piero-wheel-popup__result { display: grid; min-height: 1.3em; margin: 1rem 0 0; color: var(--piero-ink); font-size: .9rem; font-weight: 700; }
+  .piero-wheel-popup__code { display: flex; align-items: center; gap: .65rem; }
   .piero-wheel-popup__result strong { display: block; color: var(--piero-wine); font-size: clamp(1.5rem, 3vw, 1.9rem); letter-spacing: .05em; }
+  .piero-wheel-popup__code button { flex: 0 0 auto; padding: .42rem .55rem; border: 1px solid var(--piero-ink); background: transparent; color: var(--piero-ink); cursor: pointer; font-size: .62rem; font-weight: 800; letter-spacing: .08em; transition: background .18s ease, color .18s ease; }
+  .piero-wheel-popup__code button:hover, .piero-wheel-popup__code button.is-copied { background: var(--piero-ink); color: #fff; }
   .piero-wheel-popup__result small { margin-top: .2rem; font-size: .8rem; font-weight: 600; }
   .piero-wheel-popup__form { display: none; margin-top: 1rem; }
   .piero-wheel-popup[data-spun='true'] .piero-wheel-popup__form { display: block; }
@@ -121,6 +124,7 @@
     .piero-wheel-popup__panel::before { inset: 0 0 auto; width: auto; height: 40%; }
     .piero-wheel-popup__wheel-area { width: min(13.5rem, 64vw); }
     .piero-wheel-popup__content { text-align: center; }
+    .piero-wheel-popup__code { justify-content: center; }
     .piero-wheel-popup__seal { inset: auto auto 3% 1%; }
   }
 </style>
