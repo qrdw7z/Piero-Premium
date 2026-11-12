@@ -23,10 +23,11 @@ if (popup instanceof HTMLDialogElement && !window.Shopify?.designMode) {
     const result = popup.querySelector('[data-wheel-result]');
     if (!(button instanceof HTMLButtonElement) || !(wheel instanceof HTMLElement) || !(result instanceof HTMLElement) || button.disabled) return;
     const prizes = [
-      { label: '%5 indirim', code: 'PIERO5', rotation: 315 },
-      { label: '%10 indirim', code: 'PIERO10', rotation: 225 },
-      { label: '%15 indirim', code: 'PIERO15', rotation: 135 },
-      { label: '200 TL indirim', code: 'PIERO200', rotation: 45 },
+      { label: '%5 indirim', code: 'PIERO5', rotation: 324 },
+      { label: '%10 indirim', code: 'PIERO10', rotation: 252 },
+      { label: '%15 indirim', code: 'PIERO15', rotation: 180 },
+      { label: '200 TL indirim', code: 'PIERO200', rotation: 108 },
+      { label: '100 TL indirim', code: 'PIERO100', rotation: 36 },
     ];
     const prize = prizes[Math.floor(Math.random() * prizes.length)];
     button.disabled = true;
