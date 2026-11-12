@@ -260,7 +260,7 @@
             "about_copy": {
               "type": "text",
               "settings": {
-                "text": "<h3>PIERO Premium</h3><p>Sivas merkezde günlük ve premium erkek giyim.</p><p>+90 <a href=\"tel:+905524869877\">552 486 98 77</a><br/><a href=\"https://www.instagram.com/piero.premium/\">Instagram</a></p>",
+                "text": "<h3>PIERO Premium</h3><p>Sivas merkezde günlük ve premium erkek giyim.</p><p><a href=\"tel:+905524869877\">+90 552 486 98 77</a><br/><a href=\"https://www.instagram.com/piero.premium/\">Instagram</a></p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
