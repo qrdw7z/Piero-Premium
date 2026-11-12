@@ -461,12 +461,13 @@
 
 <div
   id="Hero-{{ section.id }}"
-  class="hero{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}{% if section.blocks.size == 0 and section.settings.section_height == 'auto' %} hero--no-blocks-auto-height{% endif %}{% if section.settings.stack_media_on_mobile %} hero--stack-mobile{% endif %}"
+  class="hero{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}{% if section.blocks.size == 0 and section.settings.section_height == 'auto' %} hero--no-blocks-auto-height{% endif %}{% if section.settings.stack_media_on_mobile %} hero--stack-mobile{% endif %}{% if section.settings.fit_media_to_image %} hero--fit-media{% endif %}"
   style="
     --hero-border-style: {{ section.settings.border }};
     --hero-border-width: {{ section.settings.border_width }}px;
     --hero-border-opacity: {{ section.settings.border_opacity }}%;
     --blur-opacity: {{ section.settings.reflection_opacity | divided_by: 100.0 }};
+    --hero-media-position: {{ section.settings.media_position }};
     {% if section.settings.section_height == 'custom' %}
       --hero-min-height: {{ section.settings.section_height_custom }}svh;
     {% elsif section.settings.section_height == "full-screen" %}
@@ -632,10 +633,40 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: var(--hero-media-position, center center);
     overflow: hidden;
     position: relative;
     z-index: var(--layer-base);
+  }
+
+  /* Preserve the full art direction of campaign banners instead of cropping it
+     into a fixed-height frame. Content remains over the image when present. */
+  .hero--fit-media,
+  .hero--fit-media .hero__container {
+    min-height: 0;
+  }
+
+  .hero--fit-media .hero__media-grid {
+    position: relative;
+  }
+
+  .hero--fit-media .hero__content-wrapper {
+    position: absolute;
+    inset: 0;
+  }
+
+  .hero--fit-media picture.hero__media,
+  .hero--fit-media .hero__media-wrapper {
+    display: block;
+    height: auto;
+  }
+
+  .hero--fit-media picture.hero__media > img,
+  .hero--fit-media .hero__media-wrapper > .hero__media {
+    display: block;
+    height: auto;
+    object-fit: contain;
+    object-position: var(--hero-media-position, center top);
   }
 
   /* Mobile/Desktop media visibility */
@@ -1147,6 +1178,24 @@
         }
       ],
       "default": "medium"
+    },
+    {
+      "type": "checkbox",
+      "id": "fit_media_to_image",
+      "label": "Görsele uyarla (bannerı kırpma)",
+      "default": false,
+      "info": "Görselin tamamını gösterir; menü veya sabit yükseklik nedeniyle kırpılmayı önler."
+    },
+    {
+      "type": "select",
+      "id": "media_position",
+      "label": "Görsel konumu",
+      "options": [
+        { "value": "center top", "label": "Üst orta" },
+        { "value": "center center", "label": "Orta" },
+        { "value": "center bottom", "label": "Alt orta" }
+      ],
+      "default": "center center"
     },
     {
       "type": "range",
