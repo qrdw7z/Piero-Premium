@@ -129,8 +129,8 @@
       "settings": {
         "movement_direction": "normal",
         "background_color": "#980101",
-        "padding-block-start": 24,
-        "padding-block-end": 24,
+        "padding-block-start": 11,
+        "padding-block-end": 11,
         "gap_between_elements": 24
       }
     },
