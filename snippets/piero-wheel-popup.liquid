@@ -9,7 +9,7 @@
     <div class="piero-wheel-popup__wheel-area" aria-hidden="true">
       <div class="piero-wheel-popup__pointer"></div>
       <div class="piero-wheel-popup__wheel" data-wheel>
-        <span>%5</span><span>%10</span><span>%15</span>
+        <span>%5</span><span>%10</span><span>%15</span><span>200₺</span>
       </div>
     </div>
     <div class="piero-wheel-popup__content">
@@ -66,7 +66,7 @@
     line-height: 1;
   }
 
-  .piero-wheel-popup__wheel-area { position: relative; width: min(100%, 18rem); margin-inline: auto; }
+  .piero-wheel-popup__wheel-area { position: relative; width: min(100%, 19rem); margin-inline: auto; padding: .6rem; border-radius: 50%; background: #f1efeb; }
   .piero-wheel-popup__pointer { position: absolute; z-index: 4; inset: -.45rem 0 auto; margin: auto; width: 0; height: 0; border-inline: .85rem solid transparent; border-top: 1.6rem solid #8b171b; filter: drop-shadow(0 2px 1px rgb(0 0 0 / 20%)); }
   .piero-wheel-popup__wheel {
     position: relative;
@@ -74,21 +74,24 @@
     padding: 0;
     border: .45rem solid #111;
     border-radius: 50%;
-    background: conic-gradient(#e9e4db 0 120deg, #111 120deg 240deg, #8b171b 240deg 360deg);
-    box-shadow: 0 14px 28px rgb(0 0 0 / 14%);
+    background: conic-gradient(#ece8df 0 90deg, #8b171b 90deg 180deg, #111 180deg 270deg, #c8a86b 270deg 360deg);
+    box-shadow: 0 16px 30px rgb(0 0 0 / 16%);
     transition: transform 2.35s cubic-bezier(.12,.78,.16,1);
   }
 
-  .piero-wheel-popup__wheel::after { content: 'PIERO'; position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; width: 5.15rem; height: 5.15rem; margin: auto; border: .3rem solid #fff; border-radius: 50%; background: #111; color: #fff; font-size: .76rem; font-weight: 800; letter-spacing: .15em; }
-  .piero-wheel-popup__wheel span { position: absolute; z-index: 2; width: 3.5rem; color: #111; font-size: .86rem; font-weight: 800; letter-spacing: -.02em; line-height: 1; text-align: center; transform: translate(-50%, -50%); }
-  .piero-wheel-popup__wheel span:nth-child(1) { inset: 33% auto auto 79%; }
-  .piero-wheel-popup__wheel span:nth-child(2) { inset: 84% auto auto 50%; color: #fff; }
-  .piero-wheel-popup__wheel span:nth-child(3) { inset: 33% auto auto 21%; color: #fff; }
+  .piero-wheel-popup__wheel::after { content: 'PIERO'; position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; width: 5.25rem; height: 5.25rem; margin: auto; border: .35rem solid #fff; border-radius: 50%; background: #111; color: #fff; font-size: .78rem; font-weight: 800; letter-spacing: .15em; box-shadow: 0 0 0 .18rem #111; }
+  .piero-wheel-popup__wheel span { position: absolute; z-index: 2; width: 3.65rem; color: #111; font-size: .9rem; font-weight: 800; letter-spacing: -.03em; line-height: 1; text-align: center; transform: translate(-50%, -50%); }
+  .piero-wheel-popup__wheel span:nth-child(1) { inset: 25% auto auto 75%; }
+  .piero-wheel-popup__wheel span:nth-child(2) { inset: 75% auto auto 75%; color: #fff; }
+  .piero-wheel-popup__wheel span:nth-child(3) { inset: 75% auto auto 25%; color: #fff; }
+  .piero-wheel-popup__wheel span:nth-child(4) { inset: 25% auto auto 25%; }
   .piero-wheel-popup__eyebrow { margin: 0 0 .7rem; color: #8b171b; font-size: .7rem; font-weight: 800; letter-spacing: .18em; }
   .piero-wheel-popup__content h2 { margin: 0; font-size: clamp(2rem, 5vw, 3.05rem); line-height: 1; text-transform: uppercase; }
   .piero-wheel-popup__content > p:not(.piero-wheel-popup__eyebrow):not(.piero-wheel-popup__note):not(.piero-wheel-popup__result) { margin: 1rem 0 1.25rem; }
   .piero-wheel-popup__spin { width: 100%; min-height: 3.15rem; border-radius: 0; background: #8b171b; color: #fff; }
-  .piero-wheel-popup__result { min-height: 1.3em; margin: .8rem 0 0; font-size: .85rem; font-weight: 700; }
+  .piero-wheel-popup__result { display: grid; min-height: 1.3em; margin: 1rem 0 0; color: #111; font-size: .9rem; font-weight: 700; }
+  .piero-wheel-popup__result strong { display: block; color: #8b171b; font-size: clamp(1.35rem, 3vw, 1.75rem); letter-spacing: .03em; }
+  .piero-wheel-popup__result small { margin-top: .2rem; font-size: .8rem; font-weight: 600; }
   .piero-wheel-popup__form { display: none; margin-top: 1rem; }
   .piero-wheel-popup[data-spun='true'] .piero-wheel-popup__form { display: block; }
   .piero-wheel-popup__email { display: flex; border-bottom: 1px solid #111; }
@@ -98,7 +101,7 @@
 
   @media screen and (max-width: 749px) {
     .piero-wheel-popup__panel { grid-template-columns: 1fr; gap: 1.3rem; padding: 2.6rem 1.4rem 1.6rem; }
-    .piero-wheel-popup__wheel-area { width: min(12.5rem, 60vw); }
+    .piero-wheel-popup__wheel-area { width: min(13.5rem, 64vw); }
     .piero-wheel-popup__content { text-align: center; }
   }
 </style>
