@@ -433,6 +433,50 @@ p:empty {
   .footer-content {
     gap: 2.25rem;
   }
+
+  /* The integrated newsletter control is intentionally split on small screens.
+     Keeping the arrow button inside a narrow field was clipping the email
+     placeholder and made the subscribe action difficult to hit. */
+  .footer-content .email-signup-block,
+  .footer-content .email-signup__form,
+  .footer-content .email-signup__input-group {
+    inline-size: 100%;
+    min-inline-size: 0;
+  }
+
+  .footer-content .email-signup__input-group--integrated {
+    flex-direction: column;
+    gap: .55rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .footer-content .email-signup__input-group--integrated .email-signup__input {
+    min-block-size: 3.15rem;
+    padding-inline: 1rem;
+    border: 1px solid rgb(255 255 255 / .58);
+    background: #fff;
+    color: #111;
+  }
+
+  .footer-content .email-signup__input-group--integrated .email-signup__button--integrated {
+    display: flex;
+    inline-size: 100%;
+    min-block-size: 3.15rem;
+    margin: 0;
+    padding-inline: 1rem;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #111;
+    border-radius: 0;
+  }
+
+  .footer-content .email-signup__button-icon {
+    inline-size: 1.1rem;
+    block-size: 1.1rem;
+  }
 }
 
 /* For full-width sections with margin, content still spans full width but with space on the sides */
