@@ -1,0 +1,99 @@
+{% comment %}
+  A concise fit reference for the two-piece Piero combinations. The actual
+  selectable values are Shopify variant options; this section helps shoppers
+  choose between them without interrupting the product-purchase flow.
+{% endcomment %}
+
+<section class="piero-size-guide" aria-labelledby="piero-size-guide-title-{{ section.id }}">
+  <div class="piero-size-guide__inner">
+    <div class="piero-size-guide__intro">
+      <p class="piero-size-guide__eyebrow">KALIP & ÖLÇÜ</p>
+      <h2 id="piero-size-guide-title-{{ section.id }}">{{ section.settings.heading }}</h2>
+      <p>{{ section.settings.description }}</p>
+    </div>
+
+    <div class="piero-size-guide__tables">
+      <div class="piero-size-guide__table-wrap">
+        <h3>{{ section.settings.top_heading }}</h3>
+        <table>
+          <thead>
+            <tr><th>Beden</th><th>Boy</th><th>Kilo</th></tr>
+          </thead>
+          <tbody>
+            {% for block in section.blocks %}
+              {% if block.type == 'top_size' %}
+                <tr {{ block.shopify_attributes }}><td>{{ block.settings.size }}</td><td>{{ block.settings.height }}</td><td>{{ block.settings.weight }}</td></tr>
+              {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="piero-size-guide__table-wrap">
+        <h3>{{ section.settings.bottom_heading }}</h3>
+        <table>
+          <thead>
+            <tr><th>Beden</th><th>Bel</th><th>Önerilen</th></tr>
+          </thead>
+          <tbody>
+            {% for block in section.blocks %}
+              {% if block.type == 'bottom_size' %}
+                <tr {{ block.shopify_attributes }}><td>{{ block.settings.size }}</td><td>{{ block.settings.waist }}</td><td>{{ block.settings.fit }}</td></tr>
+              {% endif %}
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="piero-size-guide__note">{{ section.settings.note }}</p>
+  </div>
+</section>
+
+{% stylesheet %}
+  .piero-size-guide { padding: clamp(2.5rem, 5vw, 5rem) max(1.25rem, calc((100vw - 1440px) / 2)); border-top: 1px solid rgb(23 23 21 / .14); color: #171715; }
+  .piero-size-guide__inner { max-width: 1440px; margin: 0 auto; }
+  .piero-size-guide__intro { display: grid; grid-template-columns: minmax(12rem, .7fr) minmax(18rem, 1.3fr); column-gap: 2rem; align-items: end; }
+  .piero-size-guide__eyebrow { grid-column: 1 / -1; margin: 0 0 .6rem; color: #6e6a63; font-size: .7rem; font-weight: 700; letter-spacing: .12em; }
+  .piero-size-guide h2 { margin: 0; font-size: clamp(1.7rem, 3vw, 3.2rem); letter-spacing: -.055em; line-height: .95; }
+  .piero-size-guide__intro > p:last-child { margin: 0; max-width: 34rem; color: #56534e; line-height: 1.55; }
+  .piero-size-guide__tables { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: clamp(2rem, 4vw, 3.5rem); }
+  .piero-size-guide__table-wrap { border-top: 1px solid #171715; }
+  .piero-size-guide h3 { margin: 0; padding: .9rem 0; font-size: .76rem; letter-spacing: .09em; text-transform: uppercase; }
+  .piero-size-guide table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  .piero-size-guide th, .piero-size-guide td { padding: .8rem 0; border-top: 1px solid rgb(23 23 21 / .14); text-align: left; }
+  .piero-size-guide th { color: #6e6a63; font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .piero-size-guide__note { margin: 1rem 0 0; color: #6e6a63; font-size: .77rem; line-height: 1.5; }
+  @media screen and (max-width: 749px) { .piero-size-guide__intro, .piero-size-guide__tables { grid-template-columns: 1fr; } .piero-size-guide__intro > p:last-child { margin-top: 1rem; } .piero-size-guide__tables { gap: 2rem; } }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Piero beden rehberi",
+  "tag": "div",
+  "class": "section-piero-size-guide",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Başlık", "default": "Doğru bedeni seç." },
+    { "type": "textarea", "id": "description", "label": "Açıklama", "default": "Kombinini üst ve pantolon bedeniyle ayrı ayrı kişiselleştir. Daha rahat bir görünüm için bir beden büyük tercih edebilirsin." },
+    { "type": "text", "id": "top_heading", "label": "Üst tablo başlığı", "default": "Üst beden" },
+    { "type": "text", "id": "bottom_heading", "label": "Pantolon tablo başlığı", "default": "Pantolon bedeni" },
+    { "type": "textarea", "id": "note", "label": "Alt not", "default": "Ölçüler öneri niteliğindedir; vücut yapısına ve tercih edilen kalıba göre değişebilir." }
+  ],
+  "blocks": [
+    { "type": "top_size", "name": "Üst beden", "settings": [ { "type": "text", "id": "size", "label": "Beden", "default": "S" }, { "type": "text", "id": "height", "label": "Boy", "default": "160–175 cm" }, { "type": "text", "id": "weight", "label": "Kilo", "default": "55–75 kg" } ] },
+    { "type": "bottom_size", "name": "Pantolon bedeni", "settings": [ { "type": "text", "id": "size", "label": "Beden", "default": "S (29–30)" }, { "type": "text", "id": "waist", "label": "Bel", "default": "29–30" }, { "type": "text", "id": "fit", "label": "Önerilen", "default": "S" } ] }
+  ],
+  "presets": [
+    { "name": "Piero beden rehberi", "blocks": [
+      { "type": "top_size", "settings": { "size": "S", "height": "160–175 cm", "weight": "55–75 kg" } },
+      { "type": "top_size", "settings": { "size": "M", "height": "170–185 cm", "weight": "75–85 kg" } },
+      { "type": "top_size", "settings": { "size": "L", "height": "175–190 cm", "weight": "85–95 kg" } },
+      { "type": "top_size", "settings": { "size": "XL", "height": "185–195 cm", "weight": "95–105 kg" } },
+      { "type": "bottom_size", "settings": { "size": "S (29–30)", "waist": "29–30", "fit": "S" } },
+      { "type": "bottom_size", "settings": { "size": "M (31–32)", "waist": "31–32", "fit": "M" } },
+      { "type": "bottom_size", "settings": { "size": "L (33–34)", "waist": "33–34", "fit": "L" } },
+      { "type": "bottom_size", "settings": { "size": "XL (36)", "waist": "36", "fit": "XL" } }
+    ] }
+  ]
+}
+{% endschema %}

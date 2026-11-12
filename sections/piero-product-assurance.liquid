@@ -1,0 +1,111 @@
+{% comment %}
+  Product-page reassurance panel. Kept separate from product data so it works for
+  every product and can be maintained in the Theme Editor.
+{% endcomment %}
+
+<section class="piero-assurance" aria-labelledby="piero-assurance-title-{{ section.id }}">
+  <div class="piero-assurance__inner">
+    <p class="piero-assurance__eyebrow">PIERO PREMIUM SERVİSİ</p>
+    <h2 id="piero-assurance-title-{{ section.id }}">{{ section.settings.heading }}</h2>
+
+    <div class="piero-assurance__grid">
+      {% for block in section.blocks %}
+        <article class="piero-assurance__item" {{ block.shopify_attributes }}>
+          <span class="piero-assurance__number" aria-hidden="true">0{{ forloop.index }}</span>
+          <div>
+            <h3>{{ block.settings.title }}</h3>
+            <p>{{ block.settings.text }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.note != blank %}
+      <p class="piero-assurance__note">{{ section.settings.note }}</p>
+    {% endif %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .piero-assurance {
+    background: #f4f2ee;
+    color: #171715;
+    padding: clamp(2.75rem, 6vw, 5.5rem) max(1.25rem, calc((100vw - 1440px) / 2));
+  }
+
+  .piero-assurance__inner {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .piero-assurance__eyebrow,
+  .piero-assurance__number,
+  .piero-assurance__note {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .piero-assurance__eyebrow { margin: 0 0 .65rem; color: #6e6a63; }
+  .piero-assurance h2 { margin: 0; font-size: clamp(1.85rem, 3vw, 3.5rem); line-height: .98; letter-spacing: -.055em; }
+
+  .piero-assurance__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: clamp(2rem, 4vw, 3.75rem);
+    border-top: 1px solid rgb(23 23 21 / .18);
+  }
+
+  .piero-assurance__item {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    gap: .85rem;
+    padding: 1.5rem 1.25rem 1.5rem 0;
+    border-bottom: 1px solid rgb(23 23 21 / .18);
+  }
+
+  .piero-assurance__item + .piero-assurance__item { border-left: 1px solid rgb(23 23 21 / .18); padding-left: 1.25rem; }
+  .piero-assurance__number { color: #6e6a63; padding-top: .2rem; }
+  .piero-assurance h3 { margin: 0 0 .45rem; font-size: .85rem; letter-spacing: .04em; text-transform: uppercase; }
+  .piero-assurance__item p { margin: 0; max-width: 28rem; color: #56534e; font-size: .9rem; line-height: 1.5; }
+  .piero-assurance__note { margin: 1rem 0 0; color: #6e6a63; letter-spacing: .06em; text-transform: none; }
+
+  @media screen and (max-width: 749px) {
+    .piero-assurance__grid { grid-template-columns: 1fr; }
+    .piero-assurance__item { padding: 1.15rem 0; }
+    .piero-assurance__item + .piero-assurance__item { border-left: 0; padding-left: 0; }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Piero ürün güvencesi",
+  "tag": "div",
+  "class": "section-piero-assurance",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Başlık", "default": "Alışverişin her adımında yanındayız." },
+    { "type": "text", "id": "note", "label": "Alt not", "default": "Soruların için: +90 552 486 98 77" }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Güvence maddesi",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Başlık", "default": "Hızlı kargo" },
+        { "type": "text", "id": "text", "label": "Açıklama", "default": "Siparişin özenle hazırlanır ve güvenle adresine ulaştırılır." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Piero ürün güvencesi",
+      "blocks": [
+        { "type": "benefit", "settings": { "title": "Hızlı kargo", "text": "Siparişin özenle hazırlanır ve güvenle adresine ulaştırılır." } },
+        { "type": "benefit", "settings": { "title": "Kolay destek", "text": "Beden ve ürün sorularında WhatsApp hattımızla yanındayız." } },
+        { "type": "benefit", "settings": { "title": "Güvenli ödeme", "text": "Ödeme adımında bilgileriniz güvenli altyapıyla korunur." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
