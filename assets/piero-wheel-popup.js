@@ -8,7 +8,7 @@ if (popup instanceof HTMLDialogElement && !window.Shopify?.designMode) {
   };
 
   if (!sessionStorage.getItem(storageKey)) {
-    window.setTimeout(() => popup.showModal(), 3000);
+    window.setTimeout(() => popup.showModal(), 1000);
   }
 
   popup.querySelector('[data-wheel-close]')?.addEventListener('click', close);

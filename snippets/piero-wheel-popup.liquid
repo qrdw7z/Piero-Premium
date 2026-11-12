@@ -79,14 +79,14 @@
     transition: transform 2.8s cubic-bezier(.12,.78,.16,1);
   }
 
-  .piero-wheel-popup__wheel::after { content: 'PIERO'; position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; width: 5.4rem; height: 5.4rem; margin: auto; border: .3rem solid #f5f2ec; border-radius: 50%; background: #111; color: #fff; font-size: .78rem; font-weight: 800; letter-spacing: .13em; }
-  .piero-wheel-popup__wheel span { position: absolute; z-index: 2; color: #111; font-size: .68rem; font-weight: 800; letter-spacing: .04em; line-height: 1; text-align: center; }
-  .piero-wheel-popup__wheel span:nth-child(1) { inset: 13% auto auto 50%; transform: translateX(-50%); }
-  .piero-wheel-popup__wheel span:nth-child(2) { inset: 30% 14% auto auto; color: #fff; }
-  .piero-wheel-popup__wheel span:nth-child(3) { inset: auto 14% 29% auto; }
-  .piero-wheel-popup__wheel span:nth-child(4) { inset: auto auto 13% 50%; transform: translateX(-50%); color: #fff; }
-  .piero-wheel-popup__wheel span:nth-child(5) { inset: auto auto 29% 14%; }
-  .piero-wheel-popup__wheel span:nth-child(6) { inset: 30% auto auto 14%; }
+  .piero-wheel-popup__wheel::after { content: 'PIERO'; position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; width: 5.4rem; height: 5.4rem; margin: auto; border: .3rem solid #f5f2ec; border-radius: 50%; background: #111; color: #fff; font-size: .78rem; font-weight: 800; letter-spacing: .13em; }
+  .piero-wheel-popup__wheel span { position: absolute; z-index: 2; width: 3.75rem; color: #111; font-size: .67rem; font-weight: 800; letter-spacing: .04em; line-height: 1.1; text-align: center; transform: translate(-50%, -50%); }
+  .piero-wheel-popup__wheel span:nth-child(1) { inset: 21% auto auto 67%; }
+  .piero-wheel-popup__wheel span:nth-child(2) { inset: 50% auto auto 79%; color: #fff; }
+  .piero-wheel-popup__wheel span:nth-child(3) { inset: 79% auto auto 67%; }
+  .piero-wheel-popup__wheel span:nth-child(4) { inset: 79% auto auto 33%; }
+  .piero-wheel-popup__wheel span:nth-child(5) { inset: 50% auto auto 21%; color: #fff; }
+  .piero-wheel-popup__wheel span:nth-child(6) { inset: 21% auto auto 33%; }
   .piero-wheel-popup__eyebrow { margin: 0 0 .65rem; font-size: .7rem; font-weight: 800; letter-spacing: .16em; }
   .piero-wheel-popup__content h2 { margin: 0; font-size: clamp(2rem, 5vw, 3.25rem); line-height: .95; text-transform: uppercase; }
   .piero-wheel-popup__content > p:not(.piero-wheel-popup__eyebrow):not(.piero-wheel-popup__note):not(.piero-wheel-popup__result) { margin: 1rem 0 1.25rem; }
