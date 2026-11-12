@@ -23,13 +23,13 @@ if (popup instanceof HTMLDialogElement && !window.Shopify?.designMode) {
     const result = popup.querySelector('[data-wheel-result]');
     if (!(button instanceof HTMLButtonElement) || !(wheel instanceof HTMLElement) || !(result instanceof HTMLElement) || button.disabled) return;
     const prizes = [
-      { percent: 5, code: 'PIERO5' },
-      { percent: 10, code: 'PIERO10' },
-      { percent: 15, code: 'PIERO15' },
+      { percent: 5, code: 'PIERO5', rotation: 300 },
+      { percent: 10, code: 'PIERO10', rotation: 180 },
+      { percent: 15, code: 'PIERO15', rotation: 60 },
     ];
     const prize = prizes[Math.floor(Math.random() * prizes.length)];
     button.disabled = true;
-    wheel.style.transform = `rotate(${1440 + Math.floor(Math.random() * 360)}deg)`;
+    wheel.style.transform = `rotate(${2160 + prize.rotation}deg)`;
     popup.dataset.spun = 'true';
     result.textContent = `Tebrikler! ${prize.code} kodu ile %${prize.percent} indirim kazandın.`;
   });
