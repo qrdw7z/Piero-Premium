@@ -75,7 +75,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p><strong>TÜM TÜRKİYE'YE ÜCRETİZ KARGO!</strong></p>",
+            "text": "<p><strong>TÜM TÜRKİYE'YE ÜCRETSİZ KARGO!</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
