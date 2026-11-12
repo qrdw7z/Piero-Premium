@@ -69,11 +69,9 @@
   .piero-wheel-popup__wheel-area { position: relative; width: min(100%, 19rem); margin-inline: auto; }
   .piero-wheel-popup__pointer { position: absolute; z-index: 1; inset: -.35rem 0 auto; margin: auto; width: 0; height: 0; border-inline: .75rem solid transparent; border-top: 1.45rem solid #111; }
   .piero-wheel-popup__wheel {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+    position: relative;
     aspect-ratio: 1;
-    padding: 1.25rem;
+    padding: 0;
     border: .5rem solid #111;
     border-radius: 50%;
     background: conic-gradient(#d9b77a 0 60deg, #111 60deg 120deg, #eee8dd 120deg 180deg, #d9b77a 180deg 240deg, #111 240deg 300deg, #eee8dd 300deg);
@@ -81,14 +79,21 @@
     transition: transform 2.8s cubic-bezier(.12,.78,.16,1);
   }
 
-  .piero-wheel-popup__wheel span { display: grid; place-items: center; color: #111; font-size: .68rem; font-weight: 800; letter-spacing: .04em; text-align: center; }
-  .piero-wheel-popup__wheel span:nth-child(2), .piero-wheel-popup__wheel span:nth-child(4) { color: #fff; }
+  .piero-wheel-popup__wheel::after { content: 'PIERO'; position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; width: 5.4rem; height: 5.4rem; margin: auto; border: .3rem solid #f5f2ec; border-radius: 50%; background: #111; color: #fff; font-size: .78rem; font-weight: 800; letter-spacing: .13em; }
+  .piero-wheel-popup__wheel span { position: absolute; z-index: 2; color: #111; font-size: .68rem; font-weight: 800; letter-spacing: .04em; line-height: 1; text-align: center; }
+  .piero-wheel-popup__wheel span:nth-child(1) { inset: 13% auto auto 50%; transform: translateX(-50%); }
+  .piero-wheel-popup__wheel span:nth-child(2) { inset: 30% 14% auto auto; color: #fff; }
+  .piero-wheel-popup__wheel span:nth-child(3) { inset: auto 14% 29% auto; }
+  .piero-wheel-popup__wheel span:nth-child(4) { inset: auto auto 13% 50%; transform: translateX(-50%); color: #fff; }
+  .piero-wheel-popup__wheel span:nth-child(5) { inset: auto auto 29% 14%; }
+  .piero-wheel-popup__wheel span:nth-child(6) { inset: 30% auto auto 14%; }
   .piero-wheel-popup__eyebrow { margin: 0 0 .65rem; font-size: .7rem; font-weight: 800; letter-spacing: .16em; }
   .piero-wheel-popup__content h2 { margin: 0; font-size: clamp(2rem, 5vw, 3.25rem); line-height: .95; text-transform: uppercase; }
   .piero-wheel-popup__content > p:not(.piero-wheel-popup__eyebrow):not(.piero-wheel-popup__note):not(.piero-wheel-popup__result) { margin: 1rem 0 1.25rem; }
   .piero-wheel-popup__spin { width: 100%; min-height: 3.15rem; border-radius: 0; background: #111; color: #fff; }
   .piero-wheel-popup__result { min-height: 1.3em; margin: .8rem 0 0; font-size: .85rem; font-weight: 700; }
-  .piero-wheel-popup__form { margin-top: 1rem; }
+  .piero-wheel-popup__form { display: none; margin-top: 1rem; }
+  .piero-wheel-popup[data-spun='true'] .piero-wheel-popup__form { display: block; }
   .piero-wheel-popup__email { display: flex; border-bottom: 1px solid #111; }
   .piero-wheel-popup__email input { width: 100%; min-width: 0; padding: .85rem 0; border: 0; background: transparent; color: #111; }
   .piero-wheel-popup__email button { border: 0; background: transparent; color: #111; font-weight: 800; font-size: .75rem; cursor: pointer; }
