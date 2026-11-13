@@ -260,7 +260,7 @@
             "about_copy": {
               "type": "text",
               "settings": {
-                "text": "<p>Hakkımızda<br/>Mağazamız<br/>Instagram<br/>+90 552 486 98 77</p>",
+                "text": "<p><a href=\"/pages/hakkimizda\" title=\"/pages/hakkimizda\">Hakkımızda</a><br/><a href=\"/pages/contact\" title=\"/pages/contact\">Mağazamız</a><br/><a href=\"https://www.instagram.com/piero.premium/\" title=\"https://www.instagram.com/piero.premium/\">Instagram</a><br/><a href=\"tel:+905524869877\" title=\"tel:+905524869877\">+90 552 486 98 77</a></p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
