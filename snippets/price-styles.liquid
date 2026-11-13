@@ -7,7 +7,12 @@
   product-price .volume-pricing-note, product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) .volume-pricing-note { display: block; font-family: var(--font-body--family); font-weight: normal; font-size: var(--font-size--xs); line-height: normal; letter-spacing: normal; text-transform: none; color: rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-subdued-text)); }
   .compare-at-price { color: rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-subdued-text)); text-decoration-line: line-through; text-decoration-thickness: 1.5px; text-decoration-color: rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-30)); }
   .price-item__group { display: inline-block; }
-  product-card product-price { display: block; margin-top: 0.55rem; font-family: var(--font-body--family); font-size: 0.92rem; font-weight: 700; line-height: 1.25; letter-spacing: 0.015em; }
-  product-card product-price .price-item__group + .price-item__group { margin-inline-start: 0.45rem; }
-  product-card product-price .compare-at-price { font-size: 0.86em; font-weight: 500; letter-spacing: 0; }
+
+  /* Shared product-price hierarchy for cards, collection pages, search and product details. */
+  product-price { display: block; margin-top: 0.55rem; font-family: var(--font-body--family); font-size: clamp(1.05rem, 1.2vw, 1.25rem); font-weight: 700; line-height: 1.25; letter-spacing: 0.015em; }
+  product-price .price-item__group + .price-item__group { margin-inline-start: 0.45rem; }
+  product-price .compare-at-price { font-size: 0.86em; font-weight: 500; letter-spacing: 0; }
+
+  /* More compact but matching hierarchy inside product grids. */
+  product-card product-price { font-size: 0.92rem; }
 {% endstylesheet %}
