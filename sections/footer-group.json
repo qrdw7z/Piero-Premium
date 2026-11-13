@@ -171,7 +171,7 @@
         "categories": {
           "type": "text",
           "settings": {
-            "text": "<h3>Kategoriler</h3><p><a href=\"/\">Anasayfa</a><br><a href=\"/collections/all?sort_by=created-descending\">Yeni Sezon</a><br><a href=\"/collections/all\">Tüm Ürünler</a><br><a href=\"/collections/all?filter.p.product_type=G%C3%B6mlek\">Gömlek</a><br><a href=\"/collections/all?filter.p.product_type=Pantolon\">Alt Giyim</a></p>",
+            "text": "<h3>Kategoriler</h3><p><a href=\"/\">Anasayfa</a><br/><a href=\"/collections/all?sort_by=created-descending\">Yeni Sezon</a><br/><a href=\"/collections/all\">Tüm Ürünler</a><br/><a href=\"/collections/all?filter.p.product_type=G%C3%B6mlek\">Gömlek</a><br/><a href=\"/collections/all?filter.p.product_type=Pantolon\">Alt Giyim</a></p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
@@ -188,8 +188,8 @@
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-start": 24,
+            "padding-inline-end": 24
           },
           "blocks": {}
         },
@@ -213,7 +213,7 @@
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
-            "padding-inline-start": 0,
+            "padding-inline-start": 24,
             "padding-inline-end": 0
           },
           "blocks": {}
@@ -260,7 +260,7 @@
             "about_copy": {
               "type": "text",
               "settings": {
-                "text": "<h3>Hakkımızda</h3><p>M<a href=\"/pages/contact\">ağazamız<br/></a>Instagram<br/><a href=\"tel:+905524869877\">+90 552 486 98 77</a></p>",
+                "text": "<p>Hakkımızda<br/>Mağazamız<br/>Instagram<br/>+90 552 486 98 77</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -277,8 +277,8 @@
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-start": 24,
+                "padding-inline-end": 24
               },
               "blocks": {}
             },
