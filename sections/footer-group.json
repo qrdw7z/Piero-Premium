@@ -260,7 +260,7 @@
             "about_copy": {
               "type": "text",
               "settings": {
-                "text": "<h3>Hakkımızda</h3><p><a href=\"/pages/contact\">Mağazamız</a><br/><a href=\"https://www.instagram.com/piero.premium/\">Instagram</a><br/><a href=\"tel:+905524869877\">+90 552 486 98 77</a></p>",
+                "text": "<h3>Hakkımızda</h3><p>M<a href=\"/pages/contact\">ağazamız<br/></a>Instagram<br/><a href=\"tel:+905524869877\">+90 552 486 98 77</a></p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
