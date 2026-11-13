@@ -159,7 +159,7 @@
                     "show_sale_price_first": true,
                     "show_installments": false,
                     "show_tax_info": false,
-                    "type_preset": "h5",
+                    "type_preset": "h4",
                     "width": "100%",
                     "alignment": "left",
                     "font": "var(--font-body--family)",
@@ -330,16 +330,81 @@
     "piero_size_guide": {
       "type": "piero-size-guide",
       "blocks": {
-        "top_s": { "type": "top_size", "settings": { "size": "S", "height": "160–175 cm", "weight": "55–75 kg" } },
-        "top_m": { "type": "top_size", "settings": { "size": "M", "height": "170–185 cm", "weight": "75–85 kg" } },
-        "top_l": { "type": "top_size", "settings": { "size": "L", "height": "175–190 cm", "weight": "85–95 kg" } },
-        "top_xl": { "type": "top_size", "settings": { "size": "XL", "height": "185–195 cm", "weight": "95–105 kg" } },
-        "bottom_s": { "type": "bottom_size", "settings": { "size": "S (29–30)", "waist": "29–30", "fit": "S" } },
-        "bottom_m": { "type": "bottom_size", "settings": { "size": "M (31–32)", "waist": "31–32", "fit": "M" } },
-        "bottom_l": { "type": "bottom_size", "settings": { "size": "L (33–34)", "waist": "33–34", "fit": "L" } },
-        "bottom_xl": { "type": "bottom_size", "settings": { "size": "XL (36)", "waist": "36", "fit": "XL" } }
+        "top_s": {
+          "type": "top_size",
+          "settings": {
+            "size": "S",
+            "height": "160–175 cm",
+            "weight": "55–75 kg"
+          }
+        },
+        "top_m": {
+          "type": "top_size",
+          "settings": {
+            "size": "M",
+            "height": "170–185 cm",
+            "weight": "75–85 kg"
+          }
+        },
+        "top_l": {
+          "type": "top_size",
+          "settings": {
+            "size": "L",
+            "height": "175–190 cm",
+            "weight": "85–95 kg"
+          }
+        },
+        "top_xl": {
+          "type": "top_size",
+          "settings": {
+            "size": "XL",
+            "height": "185–195 cm",
+            "weight": "95–105 kg"
+          }
+        },
+        "bottom_s": {
+          "type": "bottom_size",
+          "settings": {
+            "size": "S (29–30)",
+            "waist": "29–30",
+            "fit": "S"
+          }
+        },
+        "bottom_m": {
+          "type": "bottom_size",
+          "settings": {
+            "size": "M (31–32)",
+            "waist": "31–32",
+            "fit": "M"
+          }
+        },
+        "bottom_l": {
+          "type": "bottom_size",
+          "settings": {
+            "size": "L (33–34)",
+            "waist": "33–34",
+            "fit": "L"
+          }
+        },
+        "bottom_xl": {
+          "type": "bottom_size",
+          "settings": {
+            "size": "XL (36)",
+            "waist": "36",
+            "fit": "XL"
+          }
+        }
       },
-      "block_order": ["top_s", "top_m", "top_l", "top_xl", "bottom_s", "bottom_m", "bottom_l", "bottom_xl"],
+      "block_order": [
+        "top_s",
+        "top_m",
+        "top_l",
+        "top_xl",
+        "bottom_s",
+        "bottom_m",
+        "bottom_l",
+        "bottom_xl"
+      ],
       "settings": {
         "heading": "Doğru bedeni seç.",
         "description": "Kombinini üst ve pantolon bedeniyle ayrı ayrı kişiselleştir. Daha rahat bir görünüm için bir beden büyük tercih edebilirsin.",
@@ -373,7 +438,11 @@
           }
         }
       },
-      "block_order": ["shipping", "support", "payment"],
+      "block_order": [
+        "shipping",
+        "support",
+        "payment"
+      ],
       "settings": {
         "heading": "Alışverişin her adımında yanındayız.",
         "note": "Soruların için: +90 552 486 98 77"
