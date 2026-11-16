@@ -17,7 +17,7 @@
         "support": { "type": "value", "settings": { "title": "Yanındayız", "text": "Sipariş öncesi ve sonrasında destek ekibimiz bir mesaj kadar yakın." } }
       },
       "block_order": ["style", "fit", "support"],
-      "settings": { "eyebrow": "ARVEL", "heading": "Günlük stilin iyi hissettirsin.", "statement": "<p>Arvel; kolay kombinlenen, güçlü duruşu olan ve günün her anına eşlik eden parçaları bir araya getirir. Seçili ürünleriyle sade, güçlü ve rahat bir stil sunar.</p>" }
+      "settings": { "eyebrow": "ARVEL", "heading": "Türkiye’nin ilk %100 temiz içerikli markası.", "statement": "<p>Arvel, doğadan ilham alan %100 temiz içerikli ürünleriyle günlük bakım ritüellerine eşlik eder.</p>" }
     }
   },
   "order": ["about"]
