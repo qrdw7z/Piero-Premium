@@ -16,7 +16,7 @@
           "type": "text",
           "name": "t:names.title",
           "settings": {
-            "text": "<h1>{{ closest.page.title }}</h1>",
+            "text": "<p>ARVEL DESTEK</p><h1>{{ closest.page.title }}</h1><p>Sipariş, beden ve ürün soruların için bize yaz. Ekibimiz en kısa sürede dönüş yapar.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",

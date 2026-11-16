@@ -384,7 +384,7 @@ p:empty {
   }
 }
 
-/* Piero footer — structured storefront footer: brand, categories, support and about. */
+/* Arvel footer — structured storefront footer: brand, categories, support and about. */
 .section-wrapper:has(.footer-content) .section-background,
 .footer-utilities .section-background {
   background: #111;
@@ -1979,7 +1979,7 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
   }
 }
 
-/* Piero fashion storefront — restrained, editorial product presentation. */
+/* Arvel fashion storefront — restrained, editorial product presentation. */
 #header-group {
   letter-spacing: .035em;
 }

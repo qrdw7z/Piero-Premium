@@ -1,0 +1,24 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "about": {
+      "type": "piero-about",
+      "blocks": {
+        "style": { "type": "value", "settings": { "title": "Net stil", "text": "Günlük hayatta rahatça kullanacağın, güçlü ve sade parçalar." } },
+        "fit": { "type": "value", "settings": { "title": "Doğru kalıp", "text": "Ürün sayfalarındaki beden rehberiyle sana en uygun seçimi kolaylaştırıyoruz." } },
+        "support": { "type": "value", "settings": { "title": "Yanındayız", "text": "Sipariş öncesi ve sonrasında destek ekibimiz bir mesaj kadar yakın." } }
+      },
+      "block_order": ["style", "fit", "support"],
+      "settings": { "eyebrow": "ARVEL", "heading": "Günlük stilin iyi hissettirsin.", "statement": "<p>Arvel; kolay kombinlenen, güçlü duruşu olan ve günün her anına eşlik eden parçaları bir araya getirir. Seçili ürünleriyle sade, güçlü ve rahat bir stil sunar.</p>" }
+    }
+  },
+  "order": ["about"]
+}

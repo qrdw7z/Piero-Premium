@@ -1,0 +1,47 @@
+<section class="piero-about" aria-labelledby="piero-about-title-{{ section.id }}">
+  <div class="piero-about__inner">
+    <p class="piero-about__eyebrow">{{ section.settings.eyebrow }}</p>
+    <h1 id="piero-about-title-{{ section.id }}">{{ section.settings.heading }}</h1>
+    <div class="piero-about__statement">{{ section.settings.statement }}</div>
+    <div class="piero-about__values">
+      {% for block in section.blocks %}
+        <article class="piero-about__value" {{ block.shopify_attributes }}>
+          <span>0{{ forloop.index }}</span>
+          <h2>{{ block.settings.title }}</h2>
+          <p>{{ block.settings.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .piero-about { background: #f4f2ee; padding: clamp(3rem, 8vw, 7rem) max(1.25rem, calc((100vw - 1440px) / 2)); color: #171715; }
+  .piero-about__inner { max-width: 1440px; margin: auto; }
+  .piero-about__eyebrow, .piero-about__value > span { margin: 0; color: #6e6a63; font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+  .piero-about h1 { max-width: 12ch; margin: .7rem 0 0; font-size: clamp(3rem, 7vw, 6.5rem); letter-spacing: -.075em; line-height: .86; }
+  .piero-about__statement { max-width: 42rem; margin: clamp(2rem, 4vw, 4rem) 0; font-size: clamp(1.15rem, 2vw, 1.65rem); letter-spacing: -.025em; line-height: 1.35; }
+  .piero-about__statement p { margin: 0; }
+  .piero-about__values { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgb(23 23 21 / .22); }
+  .piero-about__value { min-height: 13rem; padding: 1.4rem 1.25rem 1.4rem 0; border-bottom: 1px solid rgb(23 23 21 / .18); }
+  .piero-about__value + .piero-about__value { padding-left: 1.25rem; border-left: 1px solid rgb(23 23 21 / .18); }
+  .piero-about__value h2 { margin: 2.5rem 0 .5rem; font-size: .9rem; letter-spacing: .06em; text-transform: uppercase; }
+  .piero-about__value p { max-width: 23rem; margin: 0; color: #56534e; font-size: .9rem; line-height: 1.55; }
+  @media screen and (max-width: 749px) { .piero-about__values { grid-template-columns: 1fr; } .piero-about__value + .piero-about__value { padding-left: 0; border-left: 0; } .piero-about__value { min-height: auto; padding: 1.25rem 0; } .piero-about__value h2 { margin-top: 1.5rem; } }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Arvel hakkımızda",
+  "tag": "div",
+  "class": "section-piero-about",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Üst başlık", "default": "ARVEL" },
+    { "type": "text", "id": "heading", "label": "Başlık", "default": "Günlük stilin iyi hissettirsin." },
+    { "type": "richtext", "id": "statement", "label": "Marka metni", "default": "<p>Arvel; kolay kombinlenen, güçlü duruşu olan ve günün her anına eşlik eden parçaları bir araya getirir.</p>" }
+  ],
+  "blocks": [
+    { "type": "value", "name": "Değer", "settings": [ { "type": "text", "id": "title", "label": "Başlık", "default": "Seçili ürünler" }, { "type": "textarea", "id": "text", "label": "Açıklama", "default": "Her parça, dolabında uzun süre yer bulacak bir tavırla seçilir." } ] }
+  ]
+}
+{% endschema %}

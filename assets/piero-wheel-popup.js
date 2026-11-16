@@ -1,7 +1,7 @@
 const popup = document.getElementById('piero-wheel-popup');
 
 if (popup instanceof HTMLDialogElement && !window.Shopify?.designMode) {
-  const storageKey = 'piero-wheel-popup-dismissed';
+  const storageKey = 'arvel-wheel-popup-dismissed';
   const close = () => {
     if (popup.open) popup.close();
     sessionStorage.setItem(storageKey, 'true');
@@ -49,16 +49,25 @@ if (popup instanceof HTMLDialogElement && !window.Shopify?.designMode) {
     const result = popup.querySelector('[data-wheel-result]');
     if (!(button instanceof HTMLButtonElement) || !(wheel instanceof HTMLElement) || !(result instanceof HTMLElement) || button.disabled) return;
     const prizes = [
-      { label: '%5 indirim', code: 'PIERO5', rotation: 324 },
-      { label: '%10 indirim', code: 'PIERO10', rotation: 252 },
-      { label: '%15 indirim', code: 'PIERO15', rotation: 180 },
-      { label: '200 TL indirim', code: 'PIERO200', rotation: 108 },
-      { label: '100 TL indirim', code: 'PIERO100', rotation: 36 },
+      { label: '%5 indirim', code: 'ARVEL5', rotation: 324 },
+      { label: '%10 indirim', code: 'ARVEL10', rotation: 252 },
+      { label: '%15 indirim', code: 'ARVEL15', rotation: 180 },
+      { label: '200 TL indirim', code: 'ARVEL200', rotation: 108 },
+      { label: '100 TL indirim', code: 'ARVEL100', rotation: 36 },
     ];
     const prize = prizes[Math.floor(Math.random() * prizes.length)];
+    const revealPrize = () => {
+      popup.dataset.spun = 'true';
+      popup.classList.remove('is-spinning');
+      result.innerHTML = `<span class="piero-wheel-popup__win-label">KAZANDIĞIN KOD</span><span class="piero-wheel-popup__code"><strong>${prize.code}</strong><button type="button" data-wheel-copy="${prize.code}" aria-label="${prize.code} kodunu kopyala">KODU KOPYALA</button></span><small>Tebrikler! ${prize.label} kazandın.</small>`;
+    };
+
     button.disabled = true;
+    button.textContent = 'ÇARK DÖNÜYOR...';
+    result.textContent = 'Şansın belirleniyor...';
+    popup.dataset.spun = 'false';
+    popup.classList.add('is-spinning');
     wheel.style.transform = `rotate(${2160 + prize.rotation}deg)`;
-    popup.dataset.spun = 'true';
-    result.innerHTML = `<span class="piero-wheel-popup__code"><strong>${prize.code}</strong><button type="button" data-wheel-copy="${prize.code}" aria-label="${prize.code} kodunu kopyala">KODU KOPYALA</button></span><small>Tebrikler! ${prize.label} kazandın.</small>`;
+    window.setTimeout(revealPrize, 2450);
   });
 }
