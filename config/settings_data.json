@@ -9,8 +9,8 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/logo_f1c0f67f-02ed-48c0-bb37-b755136e1d13.png",
-    "logo_height": 64,
+    "logo": "shopify://shop_images/883299763_18068295407628020_3585064813852717708_n.jpg",
+    "logo_height": 49,
     "logo_height_mobile": 35,
     "favicon": "shopify://shop_images/favicon.png",
     "page_text_color": "{{ settings.color_palette.foreground }}",
@@ -105,18 +105,6 @@
     "variant_button_radius": 14,
     "variant_button_width": "equal-width-buttons",
     "content_for_index": [],
-    "blocks": {
-      "8208493610395315515": {
-        "type": "shopify://apps/dondy-whatsapp/blocks/app-block/7f5a70cb-e171-4cc7-ac02-e2220203abd6",
-        "disabled": false,
-        "settings": {}
-      },
-      "18408366429334172745": {
-        "type": "shopify://apps/pop-convert/blocks/app-embed/ed587aec-4936-43ae-a1b3-1c9e0d08f185",
-        "disabled": false,
-        "settings": {}
-      }
-    },
     "color_palette": {
       "background": "#ffffff",
       "foreground": "#000000",
