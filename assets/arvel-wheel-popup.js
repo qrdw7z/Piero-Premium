@@ -1,4 +1,4 @@
-const popup = document.getElementById('piero-wheel-popup');
+const popup = document.getElementById('arvel-wheel-popup');
 
 if (popup instanceof HTMLDialogElement && !window.Shopify?.designMode) {
   const storageKey = 'arvel-wheel-popup-dismissed';
