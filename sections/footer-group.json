@@ -56,7 +56,7 @@
             "brand_name": {
               "type": "text",
               "settings": {
-                "text": "<h2>PIERO<br/>PREMIUM</h2>",
+                "text": "<h2>ARVEL</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
