@@ -109,7 +109,7 @@
       "name": "t:names.marquee_section",
       "settings": {
         "movement_direction": "normal",
-        "background_color": "#FA9BEB",
+        "background_color": "#fa9beb",
         "padding-block-start": 11,
         "padding-block-end": 11,
         "gap_between_elements": 24
@@ -295,7 +295,7 @@
       },
       "name": "t:names.products_grid",
       "settings": {
-        "collection": "yeni-sezon",
+        "collection": "frontpage",
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "max_products": 8,
