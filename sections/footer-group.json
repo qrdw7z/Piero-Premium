@@ -260,7 +260,7 @@
             "about_copy": {
               "type": "text",
               "settings": {
-                "text": "<p><a href=\"/pages/hakkimizda\">Hakkımızda</a><br/><a href=\"/pages/contact\">İletişim</a></p>",
+                "text": "<p><a href=\"/\">Hakkımızda</a><br/><a href=\"/pages/contact\">İletişim</a></p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
