@@ -456,7 +456,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>BUNLARI DA BEĞENEBİLİRSİN</h3>",
+            "text": "<h2>BUNLARI DA BEĞENEBİLİRSİN</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
