@@ -25,6 +25,16 @@
         {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
       </li>
     {%- endfor -%}
+    <li class="payment-icons__item payment-icons__item--iyzico">
+      <img
+        src="{{ 'iyzico-payment-logo.png' | asset_url }}"
+        class="payment-icons__iyzico-logo"
+        width="220"
+        height="95"
+        alt="iyzico ile güvenli ödeme"
+        loading="lazy"
+      >
+    </li>
   </ul>
 </div>
 
@@ -46,6 +56,18 @@
   .payment-icons__item {
     display: flex;
     align-items: center;
+  }
+
+  .payment-icons__item--iyzico {
+    padding: 4px 7px;
+    background: #fff;
+    border-radius: 4px;
+  }
+
+  .payment-icons__iyzico-logo {
+    display: block;
+    width: 88px;
+    height: auto;
   }
 {% endstylesheet %}
 
