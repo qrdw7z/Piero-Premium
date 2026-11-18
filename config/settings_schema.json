@@ -2117,5 +2117,17 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "Kargo ayarları",
+    "settings": [
+      {
+        "type": "text",
+        "id": "arvel_shipping_price",
+        "label": "Kargo ücreti",
+        "default": "99 TL",
+        "info": "Kargo fiyatını buradan takip edin. Mağazanın gerçek kargo kuralını Shopify Yönetim > Kargo ve teslimat bölümünden ayarlayın."
+      }
+    ]
   }
 ]

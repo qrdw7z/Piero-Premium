@@ -421,7 +421,7 @@
           "type": "benefit",
           "settings": {
             "title": "Hızlı kargo",
-            "text": "Kargo 99 TL’dir. 3 takım ve üzeri siparişlerinde ücretsiz olarak hazırlanır."
+            "text": "3 takım ve üzeri siparişlerinde kargon ücretsiz olarak hazırlanır."
           }
         },
         "support": {
