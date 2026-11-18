@@ -22,8 +22,10 @@
       <a class="piero-lookbook__card" href="{{ block.settings.link | default: routes.all_products_collection_url }}" {{ block.shopify_attributes }}>
         {% if block.settings.image != blank %}
           {{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '400, 600, 900, 1200', sizes: '(min-width: 990px) 33vw, 75vw', class: 'piero-lookbook__image', alt: image_alt }}
-        {% else %}
+        {% elsif block.settings.fallback_image != blank %}
           <img class="piero-lookbook__image" src="{{ block.settings.fallback_image | asset_url }}" loading="lazy" width="900" height="1200" alt="{{ block.settings.title | escape }}">
+        {% else %}
+          <div class="piero-lookbook__image piero-lookbook__placeholder" aria-hidden="true">ARVEL</div>
         {% endif %}
         <span class="piero-lookbook__caption">
           <span>{{ block.settings.title }}</span>
@@ -73,6 +75,7 @@
 
   .piero-lookbook__card { position: relative; display: block; overflow: hidden; color: #fff; background: #dfddd7; aspect-ratio: 3 / 4; }
   .piero-lookbook__image { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2, .65, .2, 1); }
+  .piero-lookbook__placeholder { display: grid; place-items: center; background: #d9d3c7; color: #171715; font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 700; letter-spacing: .14em; }
   .piero-lookbook__caption { position: absolute; right: 1rem; bottom: 1rem; left: 1rem; display: flex; justify-content: space-between; align-items: center; text-shadow: 0 1px 12px rgb(0 0 0 / .35); }
   .piero-lookbook__caption span:last-child { font-size: 1.2rem; font-weight: 400; }
 
@@ -86,27 +89,27 @@
 
 {% schema %}
 {
-  "name": "Arvel kombin vitrini",
+  "name": "Arvel pijama vitrini",
   "tag": "div",
   "class": "section-piero-lookbook",
   "settings": [
-    { "type": "text", "id": "eyebrow", "label": "Üst başlık", "default": "Seçili kombinler" },
-    { "type": "text", "id": "heading", "label": "Başlık", "default": "STİLİNİ TAMAMLA" },
-    { "type": "text", "id": "link_label", "label": "Bağlantı metni", "default": "TÜM KOMBİNLER" },
+    { "type": "text", "id": "eyebrow", "label": "Üst başlık", "default": "ARVEL PİJAMALARI" },
+    { "type": "text", "id": "heading", "label": "Başlık", "default": "DOĞAL RAHATLIK" },
+    { "type": "text", "id": "link_label", "label": "Bağlantı metni", "default": "TÜM PİJAMALAR" },
     { "type": "url", "id": "link", "label": "Bağlantı" }
   ],
   "blocks": [
     {
       "type": "look",
-      "name": "Kombin",
+      "name": "Pijama kartı",
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Görsel" },
-        { "type": "text", "id": "fallback_image", "label": "Yedek tema görseli", "default": "instagram-products/triko-kazak-haki-kombin.jpg" },
-        { "type": "text", "id": "title", "label": "Başlık", "default": "Yeni kombin" },
+        { "type": "text", "id": "fallback_image", "label": "Yedek tema görseli", "default": "" },
+        { "type": "text", "id": "title", "label": "Başlık", "default": "Yeni pijama" },
         { "type": "url", "id": "link", "label": "Bağlantı" }
       ]
     }
   ],
-  "presets": [{ "name": "Arvel kombin vitrini", "blocks": [{ "type": "look", "settings": { "title": "Triko & denim", "fallback_image": "instagram-products/triko-kazak-haki-kombin.jpg" } }, { "type": "look", "settings": { "title": "Günlük kesimler", "fallback_image": "instagram-products/oversize1.jpg" } }, { "type": "look", "settings": { "title": "Yeni sezon", "fallback_image": "instagram-products/baklava-desenli-triko-gabardin-kombin.jpg" } }] }]
+  "presets": [{ "name": "Arvel pijama vitrini", "blocks": [{ "type": "look", "settings": { "title": "Yeni sezon pijamaları" } }, { "type": "look", "settings": { "title": "Doğal dokular" } }, { "type": "look", "settings": { "title": "Rahat kalıplar" } }] }]
 }
 {% endschema %}

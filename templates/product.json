@@ -329,6 +329,7 @@
     },
     "piero_size_guide": {
       "type": "piero-size-guide",
+      "disabled": true,
       "blocks": {
         "top_s": {
           "type": "top_size",
