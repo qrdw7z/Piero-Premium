@@ -250,6 +250,19 @@
       {% render 'tax-info', has_discounts_enabled: settings.show_add_discount_code %}
     </div>
   </div>
+
+  <aside class="arvel-cart-campaign" aria-label="Sepet kampanyaları">
+    {% if cart.item_count >= 3 %}
+      <p class="arvel-cart-campaign__eyebrow">ÜCRETSİZ KARGO KAZANDINIZ</p>
+      <p><strong>3 takım sepetinizde.</strong> Kargonuz ücretsiz olarak uygulanacaktır.</p>
+    {% elsif cart.item_count >= 2 %}
+      <p class="arvel-cart-campaign__eyebrow">SÜRPRİZ HEDİYE SİZİNLE</p>
+      <p><strong>2 takım sepetinizde.</strong> Sürpriz hediyeniz siparişinize eklenecek. Bir takım daha ekleyin, kargonuz da ücretsiz olsun.</p>
+    {% else %}
+      <p class="arvel-cart-campaign__eyebrow">ARVEL AVANTAJI</p>
+      <p><strong>2 takım alana sürpriz hediye, 3 takım ve üzeri siparişlerde ücretsiz kargo.</strong></p>
+    {% endif %}
+  </aside>
 </div>
 
 <div class="cart__ctas">
@@ -595,6 +608,28 @@
 
   .cart-discount__summary:hover {
     color: rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-subdued-text));
+  }
+
+  .arvel-cart-campaign {
+    margin-top: var(--margin-lg);
+    padding: var(--padding-md);
+    border: 1px solid rgb(var(--color-foreground-rgb) / 0.16);
+    background: #f3f0ea;
+    color: var(--color-foreground);
+  }
+
+  .arvel-cart-campaign p {
+    margin: 0;
+    font-size: var(--font-size--sm);
+    line-height: 1.5;
+  }
+
+  .arvel-cart-campaign__eyebrow {
+    margin-bottom: var(--margin-2xs) !important;
+    color: #6a7d52;
+    font-size: var(--font-size--2xs) !important;
+    font-weight: 700;
+    letter-spacing: 0.1em;
   }
 
   .cart-discount__label {
