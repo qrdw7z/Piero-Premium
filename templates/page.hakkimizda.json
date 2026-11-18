@@ -17,7 +17,7 @@
         "support": { "type": "value", "settings": { "title": "Yanındayız", "text": "Sipariş öncesi ve sonrasında destek ekibimiz bir mesaj kadar yakın." } }
       },
       "block_order": ["style", "fit", "support"],
-      "settings": { "eyebrow": "ARVEL", "heading": "Türkiye’nin ilk %100 temiz içerikli markası.", "statement": "<p>Arvel, doğadan ilham alan %100 temiz içerikli ürünleriyle günlük bakım ritüellerine eşlik eder.</p>" }
+      "settings": { "eyebrow": "ARVEL", "heading": "Türkiye’nin ilk ve tek %100 doğal kadın pijama markası.", "statement": "<p>Arvel, kadınlar için doğadan ilham alan %100 doğal pijama deneyimini günlük yaşamın konforuyla bir araya getirir.</p>" }
     }
   },
   "order": ["about"]
