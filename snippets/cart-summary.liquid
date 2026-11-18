@@ -266,6 +266,10 @@
 </div>
 
 <div class="cart__ctas">
+  <p class="arvel-checkout-shipping-note" role="note">
+    <span aria-hidden="true">✦</span>
+    3 takım ve üzeri siparişlerde kargo ücreti bizden.
+  </p>
   <button
     type="submit"
     id="checkout"
@@ -489,6 +493,23 @@
     width: 100%;
     height: clamp(25px, var(--height-buy-buttons), 55px);
     padding-inline: var(--padding-4xl);
+  }
+
+  .arvel-checkout-shipping-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin: 0 0 .75rem;
+    color: var(--color-foreground-subdued);
+    font-size: var(--font-size--2xs);
+    font-weight: 700;
+    line-height: 1.45;
+    text-align: center;
+  }
+
+  .arvel-checkout-shipping-note span {
+    color: var(--color-foreground);
   }
 
   .cart-drawer__summary .cart-totals:not(:has(.cart-totals__original-container:empty)) {
