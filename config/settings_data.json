@@ -105,6 +105,13 @@
     "variant_button_radius": 14,
     "variant_button_width": "equal-width-buttons",
     "content_for_index": [],
+    "blocks": {
+      "13669795325273674392": {
+        "type": "shopify://apps/releasit-cod-form/blocks/app-embed/72faf214-4174-4fec-886b-0d0e8d3af9a2",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_palette": {
       "background": "#ffffff",
       "foreground": "#000000",
