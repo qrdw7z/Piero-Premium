@@ -120,4 +120,14 @@
     name="description"
     content="{{ page_description | escape }}"
   >
+{% elsif shop.description != blank %}
+  <meta
+    name="description"
+    content="{{ shop.description | escape }}"
+  >
+{% else %}
+  <meta
+    name="description"
+    content="Türkiye’nin ilk ve tek %100 doğal içerikli kadın pijama markası. Pamuk ve bambu dokulu kadın pijamalarını Arvel’de keşfedin."
+  >
 {% endif %}
