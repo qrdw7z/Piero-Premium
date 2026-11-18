@@ -407,9 +407,9 @@
       ],
       "settings": {
         "heading": "Doğru bedeni seç.",
-        "description": "Kombinini üst ve pantolon bedeniyle ayrı ayrı kişiselleştir. Daha rahat bir görünüm için bir beden büyük tercih edebilirsin.",
+        "description": "Pijama takımında rahat edeceğin bedeni seç. Daha bol bir görünüm istersen bir beden büyük tercih edebilirsin.",
         "top_heading": "Üst beden",
-        "bottom_heading": "Pantolon bedeni",
+        "bottom_heading": "Alt beden",
         "note": "Ölçüler öneri niteliğindedir; vücut yapısına ve tercih edilen kalıba göre değişebilir."
       }
     },
@@ -420,14 +420,14 @@
           "type": "benefit",
           "settings": {
             "title": "Hızlı kargo",
-            "text": "Siparişin özenle hazırlanır ve güvenle adresine ulaştırılır."
+            "text": "3 ürün ve üzeri siparişlerinde kargon ücretsiz olarak hazırlanır."
           }
         },
         "support": {
           "type": "benefit",
           "settings": {
             "title": "Kolay destek",
-            "text": "Beden ve ürün sorularında WhatsApp hattımızla yanındayız."
+            "text": "Beden ve ürün sorularında destek ekibimizle kolayca iletişime geçebilirsin."
           }
         },
         "payment": {
@@ -444,8 +444,8 @@
         "payment"
       ],
       "settings": {
-        "heading": "Alışverişin her adımında yanındayız.",
-        "note": "Soruların için: +90 552 486 98 77"
+        "heading": "Pijama alışverişinin her adımında yanındayız.",
+        "note": ""
       }
     },
     "product_recommendations_qggXJq": {

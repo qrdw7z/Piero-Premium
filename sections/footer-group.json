@@ -171,7 +171,7 @@
         "categories": {
           "type": "text",
           "settings": {
-            "text": "<h3>Kategoriler</h3><p><a href=\"/\">Anasayfa</a><br/><a href=\"/collections/all?sort_by=created-descending\">Yeni Sezon</a><br/><a href=\"/collections/all\">Tüm Ürünler</a><br/><a href=\"/collections/all?filter.p.product_type=G%C3%B6mlek\">Gömlek</a><br/><a href=\"/collections/all?filter.p.product_type=Pantolon\">Alt Giyim</a></p>",
+            "text": "<h3>Kategoriler</h3><p><a href=\"/\">Ana Sayfa</a><br/><a href=\"/collections/all?sort_by=created-descending\">Yeni Sezon</a><br/><a href=\"/collections/all\">Kadın Pijamaları</a><br/><a href=\"/collections/all\">Tüm Ürünler</a></p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
@@ -299,7 +299,7 @@
               "settings": {
                 "icon_color": "#ffffff",
                 "facebook_url": "",
-                "instagram_url": "https://www.instagram.com/piero.premium/",
+                "instagram_url": "",
                 "youtube_url": "",
                 "tiktok_url": "",
                 "twitter_url": "",

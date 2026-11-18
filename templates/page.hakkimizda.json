@@ -12,9 +12,9 @@
     "about": {
       "type": "piero-about",
       "blocks": {
-        "style": { "type": "value", "settings": { "title": "Net stil", "text": "Günlük hayatta rahatça kullanacağın, güçlü ve sade parçalar." } },
-        "fit": { "type": "value", "settings": { "title": "Doğru kalıp", "text": "Ürün sayfalarındaki beden rehberiyle sana en uygun seçimi kolaylaştırıyoruz." } },
-        "support": { "type": "value", "settings": { "title": "Yanındayız", "text": "Sipariş öncesi ve sonrasında destek ekibimiz bir mesaj kadar yakın." } }
+        "style": { "type": "value", "settings": { "title": "%100 doğal", "text": "Doğadan ilham alan doğal dokularla rahat ve yumuşak bir uyku deneyimi." } },
+        "fit": { "type": "value", "settings": { "title": "Kadınlara özel", "text": "Gün boyu ve gece boyunca rahat hissettiren kadın pijama takımları." } },
+        "support": { "type": "value", "settings": { "title": "Özenli hizmet", "text": "Sipariş öncesi ve sonrasında destek ekibimizle kolayca iletişime geçebilirsin." } }
       },
       "block_order": ["style", "fit", "support"],
       "settings": { "eyebrow": "ARVEL", "heading": "Türkiye’nin ilk ve tek %100 doğal kadın pijama markası.", "statement": "<p>Arvel, kadınlar için doğadan ilham alan %100 doğal pijama deneyimini günlük yaşamın konforuyla bir araya getirir.</p>" }
