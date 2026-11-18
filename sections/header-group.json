@@ -18,7 +18,7 @@
           "type": "_announcement",
           "name": "t:names.announcement",
           "settings": {
-            "text": "<strong>3 ÜRÜN VE ÜZERİ ÜCRETSİZ KARGO</strong>",
+            "text": "<strong>KARGO 99 TL · 3 TAKIM VE ÜZERİ ÜCRETSİZ</strong>",
             "link": "",
             "font": "var(--font-subheading--family)",
             "font_size": "0.75rem",
