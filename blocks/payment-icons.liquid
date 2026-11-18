@@ -26,13 +26,13 @@
       </li>
     {%- endfor -%}
   </ul>
-  <div class="payment-icons__iyzico">
+  <div class="payment-icons__iyzico" aria-label="iyzico ile güvenli ödeme">
     <img
-      src="{{ 'iyzico-payment-logo.png' | asset_url }}"
+      src="{{ 'iyzico-ile-ode-footer.svg' | asset_url }}"
       class="payment-icons__iyzico-logo"
-      width="220"
-      height="95"
-      alt="iyzico ile güvenli ödeme"
+      width="429"
+      height="32"
+      alt="iyzico ile öde, Visa ve Mastercard ile güvenli ödeme"
       loading="lazy"
     >
   </div>
@@ -60,16 +60,14 @@
 
   .payment-icons__iyzico {
     display: flex;
-    width: fit-content;
+    justify-content: var(--alignment);
+    width: 100%;
     margin-top: 12px;
-    padding: 4px 7px;
-    background: #fff;
-    border-radius: 4px;
   }
 
   .payment-icons__iyzico-logo {
     display: block;
-    width: 88px;
+    width: min(100%, 429px);
     height: auto;
   }
 {% endstylesheet %}
