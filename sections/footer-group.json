@@ -171,7 +171,7 @@
         "categories": {
           "type": "text",
           "settings": {
-            "text": "<h3>Kategoriler</h3><p><a href=\"/\">Ana Sayfa</a><br/><a href=\"/collections/all?sort_by=created-descending\">Yeni Sezon</a><br/><a href=\"/collections/all\">Kadın Pijamaları</a><br/><a href=\"/collections/all\">Tüm Ürünler</a></p>",
+            "text": "<h3>Keşfet</h3><p><a href=\"/\">Ana Sayfa</a><br/><a href=\"/collections/all\">Kadın Pijamaları</a><br/><a href=\"/collections/all?sort_by=created-descending\">Yeni Sezon</a></p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
@@ -260,7 +260,7 @@
             "about_copy": {
               "type": "text",
               "settings": {
-                "text": "<p><a href=\"/pages/hakkimizda\" title=\"/pages/hakkimizda\">Hakkımızda</a><br/><a href=\"/pages/contact\" title=\"/pages/contact\">Mağazamız</a></p>",
+                "text": "<p><a href=\"/pages/hakkimizda\">Hakkımızda</a><br/><a href=\"/pages/contact\">İletişim</a></p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
