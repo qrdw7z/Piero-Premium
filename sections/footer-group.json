@@ -284,6 +284,7 @@
             },
             "payment_icons": {
               "type": "payment-icons",
+              "disabled": true,
               "settings": {
                 "horizontal_alignment": "flex-start",
                 "gap": 10,
